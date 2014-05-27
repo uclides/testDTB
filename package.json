@@ -1,0 +1,29 @@
+{
+  "name": "passportjs-example",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "passport": "~0.2.0",
+    "shelljs": "^0.2.6",
+    "backbone": "^1.1.2",
+    "underscore": "^1.6.0",
+    "jsdom": "^0.10.5",
+    "socket.io": "^0.9.16",
+    "jquery": "^2.1.1",
+    "ejs": "^1.0.0",
+    "mysql": "^2.2.0",
+    "appjs-win32": "0.0.19",
+    "appjs": "0.0.20",
+    "mime": "^1.2.11",
+    "passport-local": "^1.0.0",
+    "express-jsdom": "0.0.1",
+    "adbkit": "^2.0.8",
+    "lodash._basecreate": "^2.4.1",
+    "lodash._objecttypes": "^2.4.1"
+  }
+}
