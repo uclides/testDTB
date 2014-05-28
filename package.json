@@ -24,6 +24,8 @@
     "express-jsdom": "0.0.1",
     "adbkit": "^2.0.8",
     "lodash._basecreate": "^2.4.1",
-    "lodash._objecttypes": "^2.4.1"
+    "lodash._objecttypes": "^2.4.1",
+    "express-json": "^1.0.0",
+    "html5": "^0.4.1"
   }
 }

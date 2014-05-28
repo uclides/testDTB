@@ -3,7 +3,6 @@
 var express = require('express'); // Express: Framework HTTP para Node.js
 var routes = require('./routes'); // Dónde tenemos la configuración de las rutas
 var path = require('path');
-var jsdom  = require('jsdom');
 var fs     = require('fs');
 var jsdom = require('jsdom');
 var http = require('http');
@@ -77,7 +76,11 @@ app.get('/logout', function(req, res) {
 });
 
 app.get('/deviceStatus',function (req,res){
-	console.log(identification.statusdevice());
+  identification.statusdevice(function(res){
+    console.log(res);
+
+  });
+   res.end();
 });
 app.get('/hero/:name', routes.salida);
 // Ruta para autenticarse con Facebook (enlace de login)
