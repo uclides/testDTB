@@ -6,9 +6,6 @@ var path = require('path');
 var fs     = require('fs');
 var jsdom = require('jsdom');
 var http = require('http');
-var usuario;
-var pass;
-var resultado;
 var passport = require('passport');
 var connections = require('./connections');
 var identification = require('./identification');
@@ -27,9 +24,14 @@ require('shelljs/global');
 // Iniciamos la aplicación Express
 
 var app = express();
+var server = http.createServer(app).listen(3000)
+var io = require('socket.io').listen(server);
+
+io.sockets.on('connection', function(socket){
+    socket.emit('message', {'message': 'hello world'});
+});
 
 // Configuración (Puerto de escucha, sistema de plantillas, directorio de vistas,...)
-app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.favicon());

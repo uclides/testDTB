@@ -1,23 +1,11 @@
 $(function() {
-
-  $('li.hero-name a').click(function() {
-  
-    var name = $(this).text();
     
-    $('#right-column h2').text(name);
-  
-    $('#facts li').remove();
-    
-    $.getJSON('/hero/' + name, function(data) {
-      for (var i = 0; i < data.length; i++) {
-        $('<li>').appendTo('#facts').text(data[i]);
-      }
-    });
-    
-    $('#right-column').show();
-    
-    return false;
-  });
-  
-  
+        var socket = io.connect('http://localhost:3000');
+            socket.on('connect', function () {
+            alert('connected');
+        });
+        socket.on('news', function (data) {
+            console.log(data);
+            socket.emit('my other event', { my: 'data' });
+        });
 });
