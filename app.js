@@ -1,10 +1,10 @@
 // Archivo principal del Backend, configuración del servidor
 // y otras opciones
-var express = require('express'); // Express: Framework HTTP para Node.js
+var express = require('express');
+var sys = require("sys");// Express: Framework HTTP para Node.js
 var routes = require('./routes'); // Dónde tenemos la configuración de las rutas
 var path = require('path');
 var fs     = require('fs');
-var jsdom = require('jsdom');
 var http = require('http');
 var passport = require('passport');
 var connections = require('./connections');
@@ -56,7 +56,6 @@ app.use(express.session({ secret: 'lollllo' }));
 
 app.use(app.router);
 
-  dom = require('express-jsdom')(app);
 // Si estoy en local, le indicamos que maneje los errores
 // y nos muestre un log más detallado
 if ('development' == app.get('env')) {

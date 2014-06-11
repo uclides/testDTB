@@ -6,9 +6,23 @@ html(lang="en")
    link(rel='stylesheet', href='/stylesheets/plugins/timeline/timeline.css')
    link(rel='stylesheet', href='/stylesheets/sb-admin.css')
    link(rel='stylesheet', href='/stylesheets/foundation.css')
-   script(src='js/jquery-1.10.2.js')
+   script(src='js/vendor/jquery-1.10.2.js')
+   script(src='js/vendor/sb-admin.js')
+   script(src='js/plugins/metisMenu/jquery.metisMenu.js')
+   script(src='js/vendor/PonyExpress.js')
+   script(src='js/backbone/views/app.js')
+   script(src='js/backbone/main.js')
+   script(src='js/backbone/init.js')
+   script(src='js/vendor/underscore.js')
+   script(src='js/vendor/backbone.js')
    script(src='/socket.io/socket.io.js')
+   script(src='js/vendor/CustomEvent.js')
+   script(src='js/vendor/CustomEventSupport.js')
+   script(src='js/backbone/models/device.js')
+   script(src='js/backbone/collections/devices.js')
    script(src='js/app/view-index.js')
+   script(src='js/app/backbone/views/app.js')
+
   body     
     #wrapper
       nav.navbar.navbar-default.navbar-fixed-top(role='navigation', style='margin-bottom: 0')
@@ -308,14 +322,22 @@ html(lang="en")
           .col-lg-12
             .row 
               #page-device
-                a.button.radius(href="deviceStatus") detectar
+                a.button(href="#") detectar
               h2.page-header Dispositivo
                 #check-device
                 .alert-box.success.radius(data-alert='')
-                  p#hola
+                  |ninguno
                   a.close(href='#') ×
-
-
+                form#cool(action="" style="display:none")
+                    input(type="hidden", name="_method", value="PUT")
+                    p Name
+                        input(type="text", name="name")
+                    p Email
+                        input(type="email", name="email")
+                    p Age
+                        input(type="number", name="age")
+                    p
+                    input(type="submit")
                   //-     button#adb cmd
                   //-     p #{adb}
                   //- each salida in consola
@@ -350,17 +372,16 @@ html(lang="en")
       // /#page-wrapper
           //- #wrapper
 
-    script(src='js/bootstrap.min.js')
-    script(src='js/plugins/metisMenu/jquery.metisMenu.js')
+    script(src='js/vendor/bootstrap.min.js')
+
     // Page-Level Plugin Scripts - Dashboard
     script(src='js/plugins/morris/raphael-2.1.0.min.js')
     script(src='js/plugins/morris/morris.js')
     // SB Admin Scripts - Include with every page
-    script(src='js/sb-admin.js')
     // Page-Level Demo Scripts - Dashboard - Use for reference
     script(src='js/demo/dashboard-demo.js')
     script(src='js/foundation/foundation.js')
     script(src='js/foundation/foundation.alert.js')
-    script(src='js/console.js')
+    script(src='js/vendor/console.js')
 
       body
