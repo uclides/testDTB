@@ -1,21 +1,21 @@
-$(function() {
-    
-    
-var check = Backbone.View.extend({
-    el: $('body'),
+   
+Puls3.Views.App = Backbone.View.extend({
     events:{
-        'click a.button':'showToast'
+        'click .button':'showToast'
     },
-    initialize: function(){
+    initialize: function($el){
 
+        this.$el=$el;
     },
     showToast: function(){
-        if($('#cool').is(':visible')){
-        $('#cool').hide();}
+
+       if(this.$el.find('#cool').is(':visible')){
+        this.$el.find("#cool").hide();}
         else{
-           $('#cool').show();  
+           this.$el.find("#cool").show(); 
         }
+    },
+    adb:function(){
+        
     }
-});
-   var check= new check();
 });
