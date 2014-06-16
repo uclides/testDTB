@@ -1,4 +1,4 @@
-   
+/*   
 Puls3.Views.App = Backbone.View.extend({
     events:{
         'click .button':'showToast'
@@ -19,3 +19,4 @@ Puls3.Views.App = Backbone.View.extend({
         
     }
 });
+*/

@@ -12,10 +12,10 @@ var out;
 client.trackDevices()
   .then(function(tracker) {
     tracker.on('add', function(device) {
-      callback('Dispositivo '+device.id+' se conectó');
+      callback(device.id);
     })
     tracker.on('remove', function(device) {
-      callback('Dispositivo '+device.id+' se desconectó');
+      callback(device.id);
 
     })
     tracker.on('end', function() {

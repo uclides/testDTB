@@ -1,5 +1,4 @@
-Puls3.Collections.Devices=Backbone.Collection.extend({
-    model:Puls3.Models.Device,
-    url:'/devices/',
-    name:'devices'
+window.DeviceCollection=Backbone.Collection.extend({
+    model:device,
+    url:'/deviceStatus'
 });

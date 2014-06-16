@@ -76,12 +76,13 @@ app.get('/logout', function(req, res) {
   res.redirect('/');
 });
 
+//app.get('/deviceStatus',identification.statusdevice);
+
 app.get('/deviceStatus',function (req,res){
-  identification.statusdevice(function(res){
-    console.log(res);
+  identification.statusdevice(function(consola){
+    return res.send(consola);
 
   });
-   res.end();
 });
 app.get('/hero/:name', routes.salida);
 // Ruta para autenticarse con Facebook (enlace de login)
